@@ -38,6 +38,7 @@ output/
 *.log
 *.csv
 !requirements.txt
+!examples/*.csv
 
 # OS
 .DS_Store
