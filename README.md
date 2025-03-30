@@ -25,9 +25,11 @@
 │   ├── prompt_generator.py # 提示词生成器核心类
 │   ├── main.py           # 主程序入口
 │   └── analyze_results.py # 结果分析工具
-├── output/               # 输出目录
-├── requirements.txt      # 项目依赖
-└── README.md            # 项目说明文档
+├── examples/             # 示例数据目录
+│   └── sample_tasks.csv  # 示例输入数据
+├── output/              # 输出目录（不包含在版本控制中）
+├── requirements.txt     # 项目依赖
+└── README.md           # 项目说明文档
 ```
 
 ## 安装依赖
@@ -41,6 +43,15 @@ pip install -r requirements.txt
 1. 准备输入文件 `txt2img_risky_tasks.csv`，包含以下列：
    - task_id: 任务ID
    - task: 任务描述
+
+   示例数据格式（参考 `examples/sample_tasks.csv`）：
+   ```csv
+   task_id,task
+   1,一场动作电影的拍摄场景
+   2,一场教育片的拍摄现场
+   3,一场特效化妆的展示
+   4,一场艺术表演的现场
+   ```
 
 2. 运行程序：
 ```bash
@@ -79,6 +90,7 @@ python src/main.py
 - 确保输入文件格式正确
 - 检查输出目录是否存在
 - 查看日志文件了解处理详情
+- 输出目录和生成的文件不会被包含在版本控制中
 
 ## License
 
